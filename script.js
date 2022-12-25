@@ -925,7 +925,7 @@ function introRoom()
   let roomTL = gsap.timeline({ onComplete: () => setState(GAME_STATE.waiting) });
   roomTL.to('#steve', { delay: 1, y: 0, rotation: 0, scale: 1, ease: 'power4.out', duration: 0.6, onComplete: () => {
   playSound('bing') 
-  textEl.textContent = "看看这个空荡荡的房间，一点儿也没有圣诞节的气息！";}});
+  textEl.textContent = "米西你看这个空荡荡的房间，一点儿也没有圣诞节的气息！";}});
   roomTL.fromTo('#bubble', { autoAlpha: 0, y: 0, x: '+=50', rotation: 5, scale: 0.9 }, { autoAlpha: 1, rotation: 0, scale: 1, x: 0, ease: 'elastic', duration: 1 });
 
 }
@@ -965,7 +965,7 @@ function introStart()
   cannonTL.to('#bubble', { autoAlpha: 0, y: '-=30', scale: 0.5, duration: 0.3, ease: 'power2.in' }, 0);
   cannonTL.to(steveEl, { y: '-=20', duration: 0.1, onComplete: () => {
       steveEl.setAttribute('src', 'https://assets.codepen.io/557388/steve.svg');
-      textEl.textContent = "点击鼠标或者空格键来发射大炮, 让我们把房间装饰得更有节日氛围!！!";
+      textEl.textContent = "用鼠标或者空格键来发射大炮, 让我们把房间装饰得更有节日氛围!！!";
       textHighlightEl.textContent = "";
       setTimeout(() => playSound('bing'), 700);
     } }, 0.5);
@@ -1001,11 +1001,11 @@ function endMessage()
   });
 
   // steveEl.setAttribute('src', 'https://assets.codepen.io/557388/snowman.svg');
-  textEl.innerHTML = `哇哦，试试按住空格键~ `;
+  textEl.innerHTML = `哇哦，再试试按住空格键~ `;
 
 
   // Be sure to send a screenshot to <a href="https://twitter.com/steeevg/" target="_blank">@steeevg</a>, he’d love to see it!`;
-  textHighlightEl.textContent = "圣诞快乐！！!";
+  textHighlightEl.textContent = "米西圣诞快乐！！!";
 
   let roomTL = gsap.timeline();
   setTimeout(() => playSound('bing'), 700);
